@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Date": { "type": "string", "format": "date" },
+        "Theme": { "type": "string" },
+        "Scripture": { "type": "string" },
+        "Devotion": { "type": "string" },
+        "PrayerPrompt": { "type": "string" },
+        "ImageDescription": { "type": "string" },
+        "OptionalPassages": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "Quotation": {
+          "type": "object",
+          "properties": {
+            "Quote": { "type": "string" },
+            "Author": { "type": "string" },
+            "Link": { "type": "string", "format": "uri" }
+          },
+          "required": ["Quote", "Author"]
+        }
+      },
+      "required": ["Date", "Theme", "Scripture", "Devotion", "ImageDescription", "PrayerPrompt"]
+    }
+  }
+  
