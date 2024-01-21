@@ -8,4 +8,4 @@ Run elenty
 
 to run in dev mode
 
-`npx @11ty/eleventy --serve`
+`npx @11ty/eleventy --serve` 
