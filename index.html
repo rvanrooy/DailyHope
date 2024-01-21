@@ -6,7 +6,7 @@ pageTitle: Welcome To Daily Hope
 {% for day in collections.days %}
 
 <li class='sermon-archive-single'>
-    <a class="semon-thumbnail-link" itemprop="url" href="{{ day.url }}" target="" title=""><div class='sermon-thumbnail'><img width="1024" height="576" src="https://source.unsplash.com/random/300x169/?nature,{{ day.day }}" class="attachment-large size-large wp-post-image" alt="" 
+    <a class="semon-thumbnail-link" itemprop="url" href="{{ day.url | url}}" target="" title=""><div class='sermon-thumbnail'><img width="1024" height="576" src="https://source.unsplash.com/random/300x169/?nature,{{ day.day }}" class="attachment-large size-large wp-post-image" alt="" 
         srcset="https://source.unsplash.com/random/300x169/?nature&sig={{ day.data.day }}1024w, 
         https://source.unsplash.com/random/300x169/?nature&sig={{ day.data.day }}?nature 300w, 
         https://source.unsplash.com/random/300x169/?nature&sig={{ day.data.day }}768w, 
@@ -18,7 +18,7 @@ pageTitle: Welcome To Daily Hope
         https://source.unsplash.com/random/300x169/?nature&sig={{ day.data.day }}1920w" sizes="(max-width: 1024px) 100vw, 1024px" /></div></a>        <div class='sermon-media'>
     <div class='preached-date'><p>{{ day.date | date: "%Y-%m-%d" }}</p></div>
     <div class='sermon-series'><p>Daily Hope</p></div>        </div>
-    <div class="sermon-title"><h2><a itemprop="url" href="{{ day.url }}" target="" title="{{ day.data.pageTitle }}">{{ day.data.pageTitle  }}: {{ day.data.devotionTitle  }}</a></h2></div>
+    <div class="sermon-title"><h2><a itemprop="url" href="{{ day.url | url }}" target="" title="{{ day.data.pageTitle }}">{{ day.data.pageTitle  }}: {{ day.data.devotionTitle  }}</a></h2></div>
    
     <div class="sermon-archive-details">
     
