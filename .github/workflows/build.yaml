@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm install
-          npm run build
+          npx @11ty/eleventy --pathprefix '/DailyHope/'
       - uses: actions/upload-pages-artifact@v2
 
   deploy:
