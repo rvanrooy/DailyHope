@@ -3,7 +3,16 @@ layout: layout1.liquid
 pageTitle: Welcome To Daily Hope
 ---
 <ul class="sermon-archive-holder"></ul>
+
 {% for day in collections.days %}
+
+    day: {{ day.data.day }}
+{% endfor %}
+
+
+{% for day in collections.days %}
+
+
 
 <li class='sermon-archive-single'>
     <a class="semon-thumbnail-link" itemprop="url" href="{{ day.url | url}}" target="" title=""><div class='sermon-thumbnail'><img width="1024" height="576" src="https://source.unsplash.com/random/300x169/?nature,{{ day.day }}" class="attachment-large size-large wp-post-image" alt="" 
