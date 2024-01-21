@@ -4,8 +4,10 @@ pageTitle: Welcome To Daily Hope
 ---
 <ul class="sermon-archive-holder"></ul>
 
-{% for day in collections.days %}
 
+This is from index.html after including layout
+
+{% for day in collections.days %}
     day: {{ day.data.day }}
 {% endfor %}
 
@@ -42,6 +44,9 @@ pageTitle: Welcome To Daily Hope
 
 
 {% endfor %}
+
+
+
 </ul>
 
 
